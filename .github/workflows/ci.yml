@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ] # This workflow runs on pushes to the 'main' branch
+
+jobs:
+  # We'll define our build and check job here 
+  build:
+    runs-on: ubuntu-latest # This job will run on a fresh Ubuntu virtual machine
+
+    steps:
+      # Steps will go here in the next updates
+      - name: Checkout code
+        uses: actions/checkout@v4 # This action checks out your repository code
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: npm ci # Installs dependencies using package-lock.json
+
+      - name: Run Linter
+        run: npm run lint
+
+      - name: Run Type Check
+        run: npm tsc --noEmit # Checks for TypeScript errors without emitting files
+
+      - name: Build project
+        run: npm run build
+        
+      # More steps (install dependencies, lint, typecheck, build) will follow
