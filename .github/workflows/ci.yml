@@ -25,7 +25,7 @@ jobs:
         run: npm run lint
 
       - name: Run Type Check
-        run: npm tsc --noEmit # Checks for TypeScript errors without emitting files
+        run: npx tsc --noEmit # Checks for TypeScript errors without emitting files
 
       - name: Build project
         run: npm run build
