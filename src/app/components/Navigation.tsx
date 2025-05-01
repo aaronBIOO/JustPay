@@ -1,12 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
+import { FiHome, FiClock, FiUsers, FiSettings } from 'react-icons/fi';
 
 function Navigation() {
     const navLinks = [
-        {name: 'Home', href: '/'},
-        {name: 'History', href: '/history'},
-        {name: 'Contacts', href: '/contacts'},
-        {name: 'Settings', href: '/settings'}
+        {name: 'Home', href: '/', icon: <FiHome />},
+        {name: 'History', href: '/history', icon: <FiClock />},
+        {name: 'Contacts', href: '/contacts', icon: <FiUsers />},
+        {name: 'Settings', href: '/settings', icon: <FiSettings />}
     ];
 
     return (
@@ -24,9 +25,9 @@ function Navigation() {
                             focus:bg-nav-button-bg-normal focus:text-brand-darkPurple focus:shadow-button-activeFocused/25
                             focus:border-brand-darkPurple focus:border
                             border border-transparent
+                            gap-1
                              ">
-                            {/* Placeholder for icons */}
-                            {/* <Icon /> */}
+                            {link.icon}
                             <span>{link.name}</span>
                         </div>
                     </Link>
@@ -50,9 +51,10 @@ function Navigation() {
                             focus:bg-nav-button-bg-normal focus:text-brand-darkPurple focus:shadow-button-activeFocused/25
                             focus:border-brand-darkPurple focus:border
                             border border-transparent
+                            gap-2
+                            px-6
                             ">
-                            {/* Placeholder for icons later */}
-                            {/* <Icon /> */}
+                            {link.icon}
                             <span className="ml-2 text-lg">{link.name}</span> {/* Link text */}
                         </div>
                     </Link>
