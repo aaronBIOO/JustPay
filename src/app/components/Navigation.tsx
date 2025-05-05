@@ -1,5 +1,8 @@
+"use client";
+
 import React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { FiHome, FiClock, FiUsers, FiSettings } from 'react-icons/fi';
 
 function Navigation() {
@@ -10,58 +13,62 @@ function Navigation() {
         {name: 'Settings', href: '/settings', icon: <FiSettings />}
     ];
 
+    const pathname = usePathname();
+
     return (
-        <div>
-            {/* --- Mobile Bottom Navigation Bar --- */}
-            <div className="fixed bottom-0 left-0 right-0 h-16 bg-blue-600 flex justify-around items-center md:hidden z-50 ">
-                {navLinks.map((link) => (
+        <>
+        {/* --- Mobile Bottom Navigation Bar --- */}
+            <div className="fixed bottom-0 left-0 right-0 h-16 bg-brand-white shadow-va-bar/20 flex justify-around items-center md:hidden z-50 ">
+                {navLinks.map((link) => {
+                    const isActive = pathname === link.href;
+                    return (
                     // Use Next.js Link component for client-side navigation
                     <Link href={link.href} key={link.name}>
-                        <div className="flex flex-col items-center text-white text-xs shadow-button-normal/15 p-2 rounded
-                            hover:shadow-button-hover/25 
-
-                            active:bg-nav-button-bg-active active:text-brand-darkPurple active:shadow-button-activeFocused/25  
-
+                        <div className={`flex flex-col items-center text-xs p-2 rounded border border-transparent
+                            ${isActive ? 'bg-nav-button-bg-active text-brand-darkPurple shadow-button-activeFocused/25' : 'bg-nav-button-bg-normal text-brand-black shadow-button-normal/15'}
+                            hover:shadow-button-hover/25
+                            active:bg-nav-button-bg-active active:text-brand-darkPurple active:shadow-button-activeFocused/25
                             focus:bg-nav-button-bg-normal focus:text-brand-darkPurple focus:shadow-button-activeFocused/25
                             focus:border-brand-darkPurple focus:border
-                            border border-transparent
                             gap-1
-                             ">
+                            `}>
                             {link.icon}
                             <span>{link.name}</span>
                         </div>
                     </Link>
-                ))}
+                    );
+                })}
             </div>
 
             {/* --- Tablet & Desktop Sidebar Navigation --- */}
-            <div className='hidden md:flex md:flex-col md:w-64 md:h-screen bg-blue-500 text-white p-4'>
-                {/* Sidebar content goes here */}
-                <div className="mb-8"> {/* Optional: Space for logo or app title */}
-                    <h1 className="text-2xl font-bold">JustPay</h1>
-                </div>
+            <div className='hidden md:flex md:flex-col md:w-60 md:h-screen bg-brand-white shadow-nav-bar/20 text-brand-black p-4" md:ml-4'>
+                    {/* Sidebar content goes here */}
+                    <div className="mb-8"> {/* Optional: Space for logo or app title */}
+                        <h1 className="text-2xl font-bold text-brand-darkPurple">JustPay</h1>
+                    </div>
 
-                {navLinks.map((link) => (
+                    {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                return (
                     <Link href={link.href} key={link.name}>
-                        <div className="flex items-center py-2 px-4 rounded hover:bg-blue-700
-                            hover:shadow-button-hover/25
-
-                            active:bg-nav-button-bg-active active:text-brand-darkPurple active:shadow-button-activeFocused/25
-                            
-                            focus:bg-nav-button-bg-normal focus:text-brand-darkPurple focus:shadow-button-activeFocused/25
-                            focus:border-brand-darkPurple focus:border
-                            border border-transparent
-                            gap-2
-                            px-6
-                            ">
+                    {/* Ensure this div has ALL the styling classes including state variants and spacing */}
+                        <div className={`flex items-center py-2 rounded my-1 border border-transparent
+                                ${isActive ? 'bg-nav-button-bg-active text-brand-darkPurple shadow-button-activeFocused/25' : 'bg-nav-button-bg-normal text-brand-black shadow-button-normal/15'}
+                                hover:shadow-button-hover/25
+                                active:bg-nav-button-bg-active active:text-brand-darkPurple active:shadow-button-activeFocused/25
+                                focus:bg-nav-button-bg-normal focus:text-brand-darkPurple focus:shadow-button-activeFocused/25
+                                focus:border-brand-darkPurple focus:border
+                                gap-2
+                                px-6
+                                `}>
                             {link.icon}
-                            <span className="ml-2 text-lg">{link.name}</span> {/* Link text */}
+                            <span className="text-lg">{link.name}</span>
                         </div>
                     </Link>
-                ))}
-            </div>
-
-        </div>
+                    );
+                })}
+           </div>
+        </>
     );
 }
 
