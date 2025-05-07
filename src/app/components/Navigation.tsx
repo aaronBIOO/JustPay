@@ -41,7 +41,7 @@ function Navigation() {
             </div>
 
             {/* --- Tablet & Desktop Sidebar Navigation --- */}
-            <div className='hidden md:flex md:flex-col md:w-60 md:h-screen bg-brand-white shadow-nav-bar/20 text-brand-black p-4" md:ml-4'>
+            <div className='hidden md:flex md:flex-col md:w-60 md:h-screen bg-brand-white shadow-nav-bar/20 text-brand-black p-4 md:ml-4 items-center'>
                     {/* Sidebar content goes here */}
                     <div className="mb-8"> {/* Optional: Space for logo or app title */}
                         <h1 className="text-2xl font-bold text-brand-darkPurple">JustPay</h1>
@@ -52,7 +52,7 @@ function Navigation() {
                 return (
                     <Link href={link.href} key={link.name}>
                     {/* Ensure this div has ALL the styling classes including state variants and spacing */}
-                        <div className={`flex items-center py-2 rounded my-1 border border-transparent
+                        <div className={`flex items-center py-2 rounded-full my-1 border border-transparent
                                 ${isActive ? 'bg-nav-button-bg-active text-brand-darkPurple shadow-button-activeFocused/25' : 'bg-nav-button-bg-normal text-brand-black shadow-button-normal/15'}
                                 hover:shadow-button-hover/25
                                 active:bg-nav-button-bg-active active:text-brand-darkPurple active:shadow-button-activeFocused/25
@@ -60,6 +60,7 @@ function Navigation() {
                                 focus:border-brand-darkPurple focus:border
                                 gap-2
                                 px-6
+                                max-w-fit max-auto
                                 `}>
                             {link.icon}
                             <span className="text-lg">{link.name}</span>
@@ -68,7 +69,7 @@ function Navigation() {
                     );
                 })}
            </div>
-        </>
+        </> 
     );
 }
 

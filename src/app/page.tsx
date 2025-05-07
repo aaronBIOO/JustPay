@@ -5,7 +5,7 @@ import Navigation from './components/Navigation';
 function Homepage() {
 
   return (
-    <div className="flex flex-col md:flex-row min-h-screen bg-brand-red/38">
+    <div className="flex flex-col md:flex-row min-h-screen bg-brand-white/20">
       <Navigation />
 
       {/* Main content */}
@@ -19,6 +19,6 @@ function Homepage() {
       </div>
     </div>
   );
-  }
+}
 
 export default Homepage;
