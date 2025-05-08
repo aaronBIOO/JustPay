@@ -7,6 +7,7 @@
     --color-brand-black: #000000;
     --color-brand-darkPurple: #574F8E; /* Used for active text/icon/stroke */
     --color-brand-lightPurple: #9688F4; /* Used as a shadow color base */
+    --color-brand-lightGrey: #EEEEEE;
 
     /* Navigation Specific Colors ( Derived from Brand ) */
     --color-nav-button-bg-normal: #F1F0F5; /* Background for Normal/Hover/Focused button */
