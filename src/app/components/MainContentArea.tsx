@@ -1,4 +1,5 @@
 import React from 'react';
+import WalletCard from './WalletCard'; 
 
 function MainContentArea() {
 
@@ -16,8 +17,8 @@ function MainContentArea() {
 
           {/* Placeholder for Wallet Cards */}
           <div className="flex gap-4 overflow-x-auto pb-2">
-            <div className="flex-none w-64 h-40 bg-gray-300 rounded-lg"></div>
-            <div className="flex-none w-64 h-40 bg-gray-300 rounded-lg"></div>
+            <WalletCard />
+            <WalletCard />
           </div>
         </div>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from './components/Navigation';
 import MainContentArea from './components/MainContentArea';
+import RightContactSidebar from './components/RightContactSidebar';
 
 
 function Homepage() {
@@ -14,10 +15,8 @@ function Homepage() {
       <MainContentArea />
       </main>
 
-      {/* Contact sidebar */}
-      <div className="hidden lg:block lg:w-64 p-4">
-        <p>Third</p>
-      </div>
+      {/* Right Contact sidebar */}
+      <RightContactSidebar />
     </div>
   );
 }
