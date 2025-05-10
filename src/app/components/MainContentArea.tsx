@@ -18,7 +18,7 @@ function MainContentArea() {
           {/* Placeholder for Wallet Cards */}
           <div className="flex gap-4 overflow-x-auto pb-2">
             <WalletCard />
-            <WalletCard />
+            <WalletCard type='new' />
           </div>
         </div>
 
