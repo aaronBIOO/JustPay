@@ -1,5 +1,6 @@
 import React from 'react';
 import WalletCard from './WalletCard'; 
+import TransactionItem from './TransactionItem';
 
 function MainContentArea() {
 
@@ -23,13 +24,13 @@ function MainContentArea() {
         </div>
 
         {/* Last Transactions Section */}
-        <div>
+        <div className='mt-8'>
             <h2 className="text-xl font-semibold text-brand-black mb-4">Last Transactions</h2>
             {/* Placeholder for Transaction List */}
-          <div className="flex flex-col gap-3">
-            <div className="bg-gray-200 p-3 rounded-lg h-16 w-160">Transaction Item Placeholder</div>
-            <div className="bg-gray-200 p-3 rounded-lg h-16 w-160">Transaction Item Placeholder</div>
-          </div>
+            <div className='flex flex-col gap-2'>
+              <TransactionItem />
+              <TransactionItem />
+            </div>
         </div>
       </div>
     </>
