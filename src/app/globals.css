@@ -8,21 +8,26 @@
     --color-brand-darkPurple: #574F8E; /* Used for active text/icon/stroke */
     --color-brand-lightPurple: #9688F4; /* Used as a shadow color base */
     --color-brand-lightGrey: #EEEEEE;
+    --color-brand-lightestPurple: #B3A9FB; /* Add this new brand color for the New Wallet solid background */
+    --color-brand-lighterPurple: #D9D5F5; /* Add this new brand color (end of the new gradient) */
+
 
     /* Navigation Specific Colors ( Derived from Brand ) */
     --color-nav-button-bg-normal: #F1F0F5; /* Background for Normal/Hover/Focused button */
     --color-nav-button-bg-active: #D9D5F5; /* Background for Active button */
 
+
     /* Custom Box Shadows (Defined using the 'x y blur spread color' format) */
-  /* Note: Opacity is handled by appending /opacity in the Tailwind class (e.g. shadow-nav-bar/20) */
   --shadow-nav-bar: 0px 4px 4px 0px var(--color-brand-lightPurple);
   --shadow-button-normal: 0px 1px 3px 0px var(--color-brand-black);
   --shadow-button-hover: 0px 3px 5px 0px var(--color-brand-black);
   --shadow-button-activeFocused: 0px 1px 3px 0px var(--color-brand-lightPurple);
 
+
   /* Custom gradient colors */
   --gradient-wallet: linear-gradient(-41deg, var(--color-brand-lightPurple) 20%, var(--color-brand-darkPurple) 73%); /* Gradient for standard wallet card */
   --gradient-new-wallet: linear-gradient(-51deg, #B3A9FB 20%, #D9D5F5 100%);
+
 
   /* font families */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
