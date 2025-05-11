@@ -28,8 +28,22 @@ function MainContentArea() {
             <h2 className="text-xl font-semibold text-brand-black mb-4">Last Transactions</h2>
             {/* Placeholder for Transaction List */}
             <div className='flex flex-col gap-2'>
-              <TransactionItem />
-              <TransactionItem />
+              <TransactionItem 
+                avatarSrc='/images/img-ph.jpg'
+                personName='Sarah'
+                date="June 10"
+                time="1:43 PM"
+                amount="-$100.00"
+                isNegative={true}
+              />
+              <TransactionItem 
+                avatarSrc='/images/img-ph1.jpg'
+                personName='John'
+                date="June 9"
+                time="2:30 PM"
+                amount="+$50.00"
+                isNegative={false}
+              />
             </div>
         </div>
       </div>
