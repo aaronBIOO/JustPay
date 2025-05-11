@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from './components/Navigation';
 import MainContentArea from './components/MainContentArea';
-import RightContactSidebar from './components/RightContactSidebar';
+import ContactSidebar from './components/ContactSidebar';
 
 
 function Homepage() {
@@ -16,7 +16,7 @@ function Homepage() {
       </main>
 
       {/* Right Contact sidebar */}
-      <RightContactSidebar />
+      <ContactSidebar />
     </div>
   );
 }
