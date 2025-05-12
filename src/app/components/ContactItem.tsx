@@ -4,7 +4,7 @@ import Image from 'next/image';
 interface ContactItemProps {
   avatarSrc: string; 
   contactName: string;
-  onSendMoney: () => void;  // Optional function to handle send money action
+  onSendMoneyClick?: () => void;  // Optional function to handle send money action
 }
 
 function ContactItem({ avatarSrc, contactName, onSendMoneyClick }: ContactItemProps) {
@@ -22,12 +22,14 @@ function ContactItem({ avatarSrc, contactName, onSendMoneyClick }: ContactItemPr
        />
      </div>
 
+    {/* Container for contact name */}
      <div className="flex-grow">
        {/* Name text - Added font-semibold and text color */}
        {/* Use the prop for the name */}
        <p className="font-semibold text-brand-black">{contactName}</p>
      </div>
 
+    {/* Send money button */}
      <button className="text-sm px-3 py-1 bg-gray-200 rounded-full text-brand-black font-semibold
         cursor-pointer" onClick={onSendMoneyClick}>
        Send money

@@ -44,8 +44,8 @@ function Navigation() {
             </div>
 
             {/* --- Tablet & Desktop Sidebar Navigation --- */}
-            <div className='hidden md:flex md:flex-col md:w-50 md:h-[85vh] bg-brand-white shadow-nav-bar/20 
-                text-brand-black p-4 md:ml-4 items-center rounded-xl mt-auto
+            <div className='hidden md:flex md:flex-col md:w-50 md:h-[100vh] bg-brand-white shadow-nav-bar/20 
+                text-brand-black p-4 items-center rounded-xl mt-auto
                 '>
                     {/* Sidebar content goes here */}
                     <div className="mb-8"> {/* Optional: Space for logo or app title */}
