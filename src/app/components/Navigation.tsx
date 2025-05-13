@@ -28,11 +28,9 @@ function Navigation() {
                     <Link href={link.href} key={link.name}>
                         <div className={`flex flex-col items-center text-xs p-2 rounded border border-transparent
                             ${isActive ? 'bg-nav-button-bg-active text-brand-darkPurple shadow-button-activeFocused/25' 
-                            : 'bg-nav-button-bg-normal text-brand-black shadow-button-normal/15'}
-                            hover:shadow-button-hover/25
+                            : 'bg-button-bg-normal text-brand-black/80 shadow-sm'}
+                            hover:shadow-md hover:bg-gray-300
                             active:bg-nav-button-bg-active active:text-brand-darkPurple active:shadow-button-activeFocused/25
-                            focus:bg-nav-button-bg-normal focus:text-brand-darkPurple focus:shadow-button-activeFocused/25
-                            focus:border-brand-darkPurple focus:border
                             gap-1
                             `}>
                             {link.icon}
@@ -52,26 +50,27 @@ function Navigation() {
                         <h1 className="text-2xl font-bold text-brand-darkPurple">JustPay</h1>
                     </div>
 
+                <div>
                     {navLinks.map((link) => {
-                const isActive = pathname === link.href;
-                return (
-                    <Link href={link.href} key={link.name}>
-                    {/* Ensure this div has ALL the styling classes including state variants and spacing */}
-                        <div className={`flex items-center py-2 rounded-full my-1 border border-transparent
-                                ${isActive ? 'bg-button-bg-active text-brand-darkPurple shadow-button-activeFocused/25' 
-                                : 'bg-button-bg-normal text-brand-black shadow-button-normal/15'}
-                                hover:shadow-button-hover/25
-                                active:bg-button-bg-active active:text-brand-darkPurple active:shadow-button-activeFocused/25
-                                focus:bg-nav-button-bg-normal focus:text-brand-darkPurple focus:shadow-button-activeFocused/25
-                                focus:border-brand-darkPurple focus:border
-                                gap-2 px-6 max-w-fit max-auto                             
+                    const isActive = pathname === link.href;
+                        return (
+                            <Link href={link.href} key={link.name}>
+                            {/* Ensure this div has ALL the styling classes including state variants and spacing */}
+                                <div className={`flex items-center rounded-full border border-transparent w-30 mx-auto justify-center mb-4
+                                    ${isActive ? 'bg-button-bg-active text-brand-darkPurple shadow-button-activeFocused/25' 
+                                    : 'bg-button-bg-normal text-brand-black/80 shadow-sm'}
+                                    hover:shadow-md hover:bg-gray-200
+                                    active:bg-button-bg-active active:text-brand-darkPurple active:shadow-button-activeFocused/25
+                                    transition duration-200 ease-in-out
+                                    gap-2 px-3 py-2                            
                                 `}>
-                            {link.icon}
-                            <span className="text-lg">{link.name}</span>
-                        </div>
-                    </Link>
-                    );
-                })}
+                                    {link.icon}
+                                    <span className="text-md font-poppins">{link.name}</span>
+                                </div>
+                            </Link>
+                        );
+                    })}
+                </div>
            </div>
         </> 
     );

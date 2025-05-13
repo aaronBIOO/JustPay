@@ -6,7 +6,7 @@ function MainContentArea() {
 
   return (
     <>
-      <div className='flex flex-col gap-6 p-4 mb-8'>
+      <div className='flex flex-col gap-6 p-4 mb-8 pr-9'>
         {/* Placeholder for send money button*/}
         <div className="flex justify-center mb-8">
           <button className="px-6 py-2 rounded-full bg-brand-lightPurple text-brand-white text-sm font-semibold">Send Money</button>
@@ -14,7 +14,7 @@ function MainContentArea() {
 
         {/* Wallets section */}
         <div>
-          <h2 className='text-xl font-semibold text-brand-black mb-4'>Wallets</h2>
+          <h2 className='text-xl font-semibold text-brand-black/70 mb-4 font-poppins'>Wallets</h2>
 
           {/* Placeholder for Wallet Cards */}
           <div className="flex gap-6 overflow-x-auto pb-2">
@@ -25,7 +25,7 @@ function MainContentArea() {
 
         {/* Last Transactions Section */}
         <div className='mt-8'>
-            <h2 className="text-xl font-semibold text-brand-black mb-4">Last Transactions</h2>
+            <h2 className="text-xl font-semibold text-brand-black/70 mb-4 font-poppins">Last Transactions</h2>
             {/* Placeholder for Transaction List */}
             <div className='flex flex-col gap-0.5'>
               <TransactionItem 

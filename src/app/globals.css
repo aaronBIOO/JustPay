@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+
 @import "tailwindcss";
+
 
 @theme {
     /* Brand Colors */
@@ -17,21 +22,25 @@
 
 
     /* Custom Box Shadows (Defined using the 'x y blur spread color' format) */
-  --shadow-nav-bar: 0px 4px 4px 0px var(--color-brand-lightPurple);
-  --shadow-button-normal: 0px 1px 3px 0px var(--color-brand-black);
-  --shadow-button-hover: 0px 3px 5px 0px var(--color-brand-black);
-  --shadow-button-activeFocused: 0px 1px 3px 0px var(--color-brand-lightPurple);
+    --shadow-nav-bar: 0px 4px 4px 0px var(--color-brand-lightPurple);
+    --shadow-button-normal: 0px 1px 3px 0px var(--color-brand-lightPurple); 
+    --shadow-button-hover: 0px 3px 5px 0px var(--color-brand-lightPurple); 
+    --shadow-wallet-subtle: 0px 2px 4px 0px var(--color-brand-darkPurple); 
+    --shadow-button-activeFocused: 0px 1px 3px 0px var(--color-brand-lightPurple);
+    --shadow-cards: 0px 3px 5px 0px var(--color-brand-lightPurple);
 
 
-  /* Custom gradient colors */
-  --gradient-wallet: linear-gradient(-41deg, var(--color-brand-lightPurple) 20%, var(--color-brand-darkPurple) 73%); /* Gradient for standard wallet card */
-  --gradient-new-wallet: linear-gradient(-51deg, #B3A9FB 20%, #D9D5F5 100%);
-
-  /*Transaction Amount Background Colors */
-  --color-transaction-negative-bg: #F7A1A1; /* Background for negative transaction amount */
-  --color-transaction-positive-bg: #AAEF7E; /* Background for positive transaction amount */
+    /* Custom gradient colors */
+    --gradient-wallet: linear-gradient(-41deg, var(--color-brand-lightPurple) 20%, var(--color-brand-darkPurple) 73%); /* Gradient for standard wallet card */
+    --gradient-new-wallet: linear-gradient(-51deg, #B3A9FB 20%, #D9D5F5 100%);
 
 
-  /* font families */
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    /*Transaction Amount Background Colors */
+    --color-transaction-negative-bg: #F7A1A1; /* Background for negative transaction amount */
+    --color-transaction-positive-bg: #AAEF7E; /* Background for positive transaction amount */
+
+
+    /* font families */
+    --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-poppins: "Poppins", sans-serif;
 }

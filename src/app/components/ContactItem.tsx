@@ -26,16 +26,15 @@ function ContactItem({ avatarSrc, contactName, onSendMoneyClick }: ContactItemPr
      <div className="flex-grow">
        {/* Name text - Added font-semibold and text color */}
        {/* Use the prop for the name */}
-       <p className="font-semibold text-brand-black/90">{contactName}</p>
+       <p className="font-semibold text-brand-black/70">{contactName}</p>
      </div>
 
     {/* Send money button */}
      <button className="text-sm px-3 py-2 bg-button-bg-normal rounded-full text-brand-black/80 
         cursor-pointer shadow-sm 
-        hover:shadow-md hover:bg-gray-300 
-        active:bg-button-bg-active
-        focus:outline-none focus:ring-2 focus:ring-brand-darkPurple focus:ring-opacity-50
-        transition duration-200 ease-in-out" 
+        hover:shadow-md hover:bg-gray-200 
+        active:bg-button-bg-active active:text-brand-darkPurple active:shadow-button-activeFocused/25
+        transition duration-200 ease-in-out font-poppins" 
         onClick={onSendMoneyClick}
       >
        Send money
