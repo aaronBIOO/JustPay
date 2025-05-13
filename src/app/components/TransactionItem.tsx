@@ -15,7 +15,7 @@ function TransactionItem({avatarSrc, personName, date, time, amount, isNegative}
   const amountBgClass = isNegative ? 'bg-transaction-negative-bg' : 'bg-transaction-positive-bg'
 
   return (
-    <div className="flex items-center w-164 p-4 rounded-lg shadow-sm bg-white mb-2 h-24">
+    <div className="flex items-center w-184 p-4 rounded-lg shadow-sm bg-white mb-2 h-24">
       {/* Placeholder for the person's image/avatar */}
       <div className="w-10 h-10 rounded-full overflow-hidden mr-4 relative"> 
         <Image

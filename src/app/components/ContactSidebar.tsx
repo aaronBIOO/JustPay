@@ -13,7 +13,7 @@ function ContactSidebar() {
   ];
 
   return (
-    <div className="w-64 bg-white rounded-lg p-4 shadow-md hidden lg:block">
+    <div className="w-70 bg-white rounded-lg p-4 shadow-md shadow-nav-bar/20 hidden lg:block">
      <h2 className="text-xl font-semibold text-brand-black mb-4">Contacts</h2>
 
      <div className="flex flex-col gap-2">

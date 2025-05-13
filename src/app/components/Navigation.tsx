@@ -58,10 +58,10 @@ function Navigation() {
                     <Link href={link.href} key={link.name}>
                     {/* Ensure this div has ALL the styling classes including state variants and spacing */}
                         <div className={`flex items-center py-2 rounded-full my-1 border border-transparent
-                                ${isActive ? 'bg-nav-button-bg-active text-brand-darkPurple shadow-button-activeFocused/25' 
-                                : 'bg-nav-button-bg-normal text-brand-black shadow-button-normal/15'}
+                                ${isActive ? 'bg-button-bg-active text-brand-darkPurple shadow-button-activeFocused/25' 
+                                : 'bg-button-bg-normal text-brand-black shadow-button-normal/15'}
                                 hover:shadow-button-hover/25
-                                active:bg-nav-button-bg-active active:text-brand-darkPurple active:shadow-button-activeFocused/25
+                                active:bg-button-bg-active active:text-brand-darkPurple active:shadow-button-activeFocused/25
                                 focus:bg-nav-button-bg-normal focus:text-brand-darkPurple focus:shadow-button-activeFocused/25
                                 focus:border-brand-darkPurple focus:border
                                 gap-2 px-6 max-w-fit max-auto                             

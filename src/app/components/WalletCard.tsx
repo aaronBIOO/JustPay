@@ -12,7 +12,7 @@ function WalletCard({ type = 'standard', balance, walletName }: WalletCardProps)
   if (type === 'new') {
     return (
       // Structure and styling for the "New Wallet" card
-      <div className="w-80 h-40 rounded-lg shadow-md p-4 text-white flex flex-col justify-between 
+      <div className="w-80 h-45 rounded-lg shadow-md p-4 text-white flex flex-col justify-between 
           cursor-pointer bg-brand-lightestPurple/80 
           hover:bg-brand-lightestPurple transition duration-300 ease-in-out transform
           hover: -transalte-y-1 hover:shadow-lg hover:shadow-brand-lightPurple/25
@@ -27,7 +27,7 @@ function WalletCard({ type = 'standard', balance, walletName }: WalletCardProps)
   }
 
   return (
-    <div className="w-80 h-40 rounded-lg shadow-md p-4 text-white flex flex-col justify-between 
+    <div className="w-100 h-45 rounded-lg shadow-md p-4 text-white flex flex-col justify-between 
         [background-image:linear-gradient(-41deg,var(--color-brand-lightPurple)_20%,var(--color-brand-darkPurple)_73%)]
         hover:shadow-lg hover:shadow-brand-lightPurple/25
         ">

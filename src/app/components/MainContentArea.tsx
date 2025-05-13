@@ -17,7 +17,7 @@ function MainContentArea() {
           <h2 className='text-xl font-semibold text-brand-black mb-4'>Wallets</h2>
 
           {/* Placeholder for Wallet Cards */}
-          <div className="flex gap-4 overflow-x-auto pb-2">
+          <div className="flex gap-6 overflow-x-auto pb-2">
             <WalletCard walletName='Primary Wallet'/>
             <WalletCard type='new' />
           </div>
@@ -27,7 +27,7 @@ function MainContentArea() {
         <div className='mt-8'>
             <h2 className="text-xl font-semibold text-brand-black mb-4">Last Transactions</h2>
             {/* Placeholder for Transaction List */}
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col gap-0.5'>
               <TransactionItem 
                 avatarSrc='/images/img-ph.jpg'
                 personName='Sarah'
