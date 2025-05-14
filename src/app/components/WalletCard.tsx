@@ -40,15 +40,17 @@ function WalletCard({ type = 'standard', balance, walletName }: WalletCardProps)
       {/* Bottom section: Wallet Name and Refill button */}
       <div className="flex justify-between items-center">
         {/* Display the walletName prop, with a default if not provided */}
-        <p className="text-xs opacity-80">{walletName || 'My Wallet'}</p> {/* Added slight opacity */}
+        <p className="text-xs opacity-80">{walletName || 'My Wallet'}</p> 
         {/* Refill button */}
-        <button className="text-xs px-4 py-2 bg-white text-brand-black/80
+        <button className="text-xs px-4 py-3 bg-white text-brand-black/70
          rounded-full font-semibold cursor-pointer
          hover:bg-gray-100 transition-colors duration-200 shadow-sm hover:shadow-lg
          active:bg-gray-200 active:shadow-sm
          transition-all duration-200 flex items-center justify-center space-x-1
+         focus:outline-none focus:ring-2 focus:ring-brand-darkPurple focus:ring-opacity-50
+         font-poppins
          ">
-          Refill wallet <FiPlus className="w-3 h-3 text-brand-black ml-2" />
+         <FiPlus className="w-4 h-4 text-brand-black/80 mr-2" /> Refill wallet 
         </button>
       </div>
     </div>

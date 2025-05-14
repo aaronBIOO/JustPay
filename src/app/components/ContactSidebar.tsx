@@ -14,12 +14,16 @@ function ContactSidebar() {
 
   return (
     <div className="w-80 bg-white rounded-lg p-4 shadow-nav-bar/20 hidden lg:block">
-     <h2 className="text-xl font-semibold text-brand-black/65 mb-4 font-poppins">Contacts</h2>
+     <h2 className="text-xl font-semibold text-brand-black/65 
+      mb-4 font-poppins
+      ">
+        Contacts
+    </h2>
 
      <div className="flex flex-col gap-4">
        {contactsData.map((contact, index) => (
         <ContactItem
-          key={index} // Using index as key for now, replace with unique ID if available
+          key={index} 
           avatarSrc={contact.avatarSrc}
           contactName={contact.contactName}
         />

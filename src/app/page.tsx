@@ -7,7 +7,9 @@ import ContactSidebar from './components/ContactSidebar';
 function Homepage() {
 
   return (
-    <div className="flex flex-col md:flex-row min-h-screen bg-brand-lightGrey pt-16 pb-4 px-4">
+    <div className="flex flex-col md:flex-row min-h-screen 
+      bg-brand-lightGrey pt-16 pb-4 px-4
+      ">
       <Navigation />
 
       {/* Main content area: Wallet and Last Transactions */}
