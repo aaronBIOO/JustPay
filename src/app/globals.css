@@ -51,8 +51,8 @@
         @apply focus:outline-none focus:ring-2 focus:ring-brand-darkPurple;       
     }
 
-    .no-ring-on-active:focus:active {
-    outline: none;
-    box-shadow: none;
-  }
+    .no-ring-on-active:active {
+        outline: none;
+        box-shadow: none;
+    }
 }

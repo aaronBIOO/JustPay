@@ -34,14 +34,14 @@ function ContactItem({ avatarSrc, contactName, onSendMoneyClick }: ContactItemPr
         text-brand-black/80 
         cursor-pointer shadow-sm 
         hover:shadow-md hover:bg-gray-200 
-        active:bg-button-bg-active active:text-brand-darkPurple 
-        active:shadow-button-activeFocused/25
         transition duration-200 ease-in-out font-poppins
-        focus:outline-none focus:ring-2 focus:ring-brand-darkPurple focus:ring-opacity-50" 
+        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-darkPurple focus-visible:ring-opacity-50
+        active:bg-button-bg-active active:text-brand-darkPurple
+        active:outline-none active:ring-0" 
         onClick={onSendMoneyClick}
       >
        Send money
-     </button>
+      </button>
     </div>
   );
 }
