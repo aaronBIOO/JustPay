@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import WalletCard from './WalletCard'; 
 import TransactionItem from './TransactionItem';
