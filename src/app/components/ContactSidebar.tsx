@@ -15,7 +15,7 @@ function ContactSidebar() {
   ];
 
   return (
-    <div className="w-80 bg-white rounded-lg p-4 shadow-nav-bar/20 hidden lg:block">
+    <div className="w-70 bg-white rounded-lg p-4 shadow-nav-bar/20 hidden lg:block">
      <h2 className="text-xl font-semibold text-brand-black/65 
       mb-4 font-poppins
       ">
