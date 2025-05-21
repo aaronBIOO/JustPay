@@ -4,11 +4,11 @@ import React from 'react';
 import WalletCard from './WalletCard'; 
 import TransactionItem from './TransactionItem';
 
-function MainContentArea() {
+function HomeContent() {
 
   return (
     <>
-      <div className='flex flex-col gap-6 mb-8'>
+      <div className='flex flex-col gap-6 mb-8 pt-4'>
         {/* Placeholder for send money button*/}
         <div className="hidden flex justify-center mb-8">
           <button className="px-6 py-2 rounded-full bg-brand-lightPurple 
@@ -20,7 +20,7 @@ function MainContentArea() {
 
         {/* Wallets section */}
         <div>
-          <h2 className='text-xl font-semibold text-brand-black/70 
+          <h2 className='text-xl font-semibold text-brand-black/80 
           mb-4 font-poppins
           '>
             Wallets
@@ -35,7 +35,7 @@ function MainContentArea() {
 
         {/* Last Transactions Section */}
         <div className='mt-8'>
-            <h2 className="text-xl font-semibold text-brand-black/70 
+            <h2 className="text-xl font-semibold text-brand-black/80 
               mb-4 font-poppins
               ">Last Transactions
             </h2>
@@ -57,6 +57,22 @@ function MainContentArea() {
                 amount="+$50.00"
                 isNegative={false}
               />
+              <TransactionItem 
+                avatarSrc='/images/img-ph2.jpg'
+                personName='Mark'
+                date="June 8"
+                time="10:00 AM"
+                amount="-$75.00"
+                isNegative={true}
+              />
+              <TransactionItem 
+                avatarSrc='/images/img-ph1.jpg'
+                personName='Christy'
+                date="June 7"
+                time="5:00 PM"
+                amount="+$200.00"
+                isNegative={false}
+              />
             </div>
         </div>
       </div>
@@ -64,4 +80,4 @@ function MainContentArea() {
   );
 }
 
-export default MainContentArea;
+export default HomeContent;

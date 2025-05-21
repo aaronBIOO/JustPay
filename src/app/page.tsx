@@ -1,5 +1,5 @@
 import React from 'react';
-import MainContentArea from './components/MainContentArea';
+import MainContentArea from './components/HomeContent';
 
 
 function Homepage() {
