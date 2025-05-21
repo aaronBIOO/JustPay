@@ -23,18 +23,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head />
-      <body className={`${inter.variable} font-sans bg-brand-lightGrey flex min-h-screen pt-8 overflow-x-hidden`}>
-        <div className="ml-4 h-[calc(100vh-4rem)]">
+      <body className={`${inter.variable} font-sans bg-brand-lightGrey flex min-h-screen p-4 overflow-x-hidden`}>
+        <div className="h-full flex-shrink-0">
           <Navigation />
         </div>
       
-        <div className=" flex flex-1 min-h-[calc(100vh-4rem)]">
-          <main className="flex-1 pl-9 overflow-y-auto mb-16 md:mb-0">
+        <div className=" flex flex-1 gap-4 min-w-0">
+          <main className="pl-9 flex-1 px-4 overflow-y-auto mb-16 md:mb-0 min-w-0 overflow-x-hidden">
             {children}
           </main> 
 
-          <div className="mr-4 h-full w-70">
+          <div className="max-w-xs h-full flex-shrink-0">
             <ContactSidebar />
           </div>          
         </div>   
