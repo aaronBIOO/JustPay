@@ -8,7 +8,7 @@ function MainContentArea() {
 
   return (
     <>
-      <div className='flex flex-col gap-6 p-4 mb-8 pr-9'>
+      <div className='flex flex-col gap-6 mb-8'>
         {/* Placeholder for send money button*/}
         <div className="hidden flex justify-center mb-8">
           <button className="px-6 py-2 rounded-full bg-brand-lightPurple 
