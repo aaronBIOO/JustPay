@@ -7,3 +7,10 @@
 
 **Other features will be announced soon.**
 
+## Tech Stack ( for frontend, for now )
+- TypeScript
+- React
+- Next.js
+- Tailwind CSS
+
+**Other stacks / tools used in this project will be added soon**
